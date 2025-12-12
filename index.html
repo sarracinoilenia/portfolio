@@ -14,9 +14,7 @@
 <header class="header">
     <div class="container">
         <div class="logo">IS</div>
-        <div class="header-buttons">
-            <a href="#information" class="btn-header">information</a>
-            <a href="#subscribe" class="btn-header">subscribe</a>
+        <div class="menu">
             <button class="hamburger" id="hamburger">☰</button>
         </div>
     </div>
@@ -34,12 +32,10 @@
 
 <!-- HERO -->
 <section class="me">
-    <img src="images/IMG_7862.jpeg" class="me-img" alt="foto me">
+    <img src="images/me.jpeg" class="me-img" alt="foto me">
     <div class="hero-content">
         <p class="portfolio-label">Portfolio</p>
         <h1>ILENIA<br>SARRACINO</h1>
-        <a class="ig-link" href="https://www.instagram.com/sarracinoilenia" target="_blank">→ https://www.instagram.com/sarracinoilenia</a>
-    </div>
 </section>
 
 <!-- INTRO -->
@@ -127,10 +123,18 @@ Ogni volta che torno a Roma riscopro qualcosa di nuovo: tra tradizione e moderni
                 <p class="project-title">Paraschiena 3D</p>
             </div>
             <div class="project-card" onclick="openModal('Paralume anni 70', 'images/paralume.JPG')">
-                <div class="project-img-wrapper">
-                    <img src="images/paralume.JPG" alt="Paralume anni 70" />
-                </div>
-                <p class="project-title">Paralume anni 70</p>
+    <div class="project-img-wrapper">
+        <img src="images/paralume.JPG" alt="Paralume anni 70" />
+    </div>
+    <p class="project-title">Paralume anni 70</p>
+</div>
+
+<div class="project-card" onclick="openModal('Bestiario', 'images/bestiario.JPG')">
+    <div class="project-img-wrapper">
+        <img src="images/bestiario.JPG" alt="Bestiario" />
+    </div>
+    <p class="project-title">Bestiario</p>
+</div>
             </div>
         </div>
     </div>
@@ -146,10 +150,17 @@ Ogni volta che torno a Roma riscopro qualcosa di nuovo: tra tradizione e moderni
 </div>
 
 <!-- FOOTER -->
-<footer class="footer">
-    <div class="container">
-        <p class="footer-text">© 2025 — Portfolio Ilenia Sarracino</p>
+<footer class="footer-simple">
+    <h2 class="footer-title">INFO</h2>
+
+    <div class="footer-socials">
+        <a href="https://www.instagram.com/sarracinoilenia" target="_blank" class="insta-link">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="insta-icon">
+            @sarracinoilenia
+        </a>
     </div>
+
+    <p class="footer-email">sarracinoilenia57@gmail.com</p>
 </footer>
 
 <script>
