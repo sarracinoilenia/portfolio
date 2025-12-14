@@ -57,7 +57,6 @@ Nel mio percorso ho imparato che la lingua non è solo uno strumento, ma un pont
         <h3 class="section-title">Le mie origini</h3>
         <div class="origini-grid">
             <div class="roma-slider-modern">
-                <button class="arrow-btn left">‹</button>
                 <div class="slider-frame">
                     <div class="slider-strip">
                         <div class="slide"><img src="images/WhatsApp Image 2025-11-14 at 16.32.53.jpeg" alt="Roma 1"></div>
@@ -67,7 +66,6 @@ Nel mio percorso ho imparato che la lingua non è solo uno strumento, ma un pont
                            <div class="slide"><img src="images/roma3.jpg" alt="Roma "></div>
                     </div>
                 </div>
-                <button class="arrow-btn right">›</button>
             </div>
             <div class="origini-text-modern">
                 <p>Roma per me è più di una città: è una parte delle mie radici e della mia identità. <br><br>
@@ -184,8 +182,8 @@ document.querySelectorAll('.menu-overlay a').forEach(link => {
 // Slider con auto-scroll
 const strip = document.querySelector('.slider-strip');
 const slides = document.querySelectorAll('.slide');
-const prev = document.querySelector('.arrow-btn.left');
-const next = document.querySelector('.arrow-btn.right');
+const sliderFrame = document.querySelector('.slider-frame');
+
 let index = 0;
 let autoSlideInterval;
 
@@ -197,7 +195,7 @@ function startAutoSlide() {
     autoSlideInterval = setInterval(() => {
         index = (index + 1) % slides.length;
         update();
-    }, 4000); // Cambia immagine ogni 4 secondi
+    }, 4000); // 4 secondi
 }
 
 function resetAutoSlide() {
@@ -205,19 +203,14 @@ function resetAutoSlide() {
     startAutoSlide();
 }
 
-next.addEventListener('click', () => {
+// click sull'immagine → slide successiva
+sliderFrame.addEventListener('click', () => {
     index = (index + 1) % slides.length;
     update();
     resetAutoSlide();
 });
 
-prev.addEventListener('click', () => {
-    index = (index - 1 + slides.length) % slides.length;
-    update();
-    resetAutoSlide();
-});
-
-// Avvia lo slider automatico
+// avvio automatico
 startAutoSlide();
 
 // Modal Progetti
